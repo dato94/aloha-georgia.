@@ -27,7 +27,7 @@ const Footer = () => {
                 <video src={video2} loop autoPlay muted type="video/mp4"></video>
             </div>
 
-            <div className="setContent container">
+            <div className="secContent container">
                 <div className="contactDiv flex">
                     <div data-aos="fade-up" className="text">
                         <small>KEEP IN TOUCH</small>
