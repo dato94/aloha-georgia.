@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./footer.scss";
 import video2 from "../../assets/video2.mp4";
 import {FiSend} from "react-icons/fi"
@@ -9,8 +9,18 @@ import {AiFillInstagram} from "react-icons/ai"
 import {FaTripadvisor} from "react-icons/fa"
 import {FiChevronRight} from "react-icons/fi"
 
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 
 const Footer = () => {
+
+    // create a react hook to add a scroll animation...
+    useEffect(()=> {
+        Aos.init({duration: 2000})
+    }, [])
+
+
     return (
         <section className="footer">
             <div className="videoDiv">
@@ -19,14 +29,14 @@ const Footer = () => {
 
             <div className="setContent container">
                 <div className="contactDiv flex">
-                    <div className="text">
+                    <div data-aos="fade-up" className="text">
                         <small>KEEP IN TOUCH</small>
                         <h2>Travel with us</h2>
                     </div>
 
                     <div className="inputDiv flex">
-                        <input type="text" placeholder="Enter Email Address" />
-                        <button className="btn flex" type="submit">
+                        <input data-aos="fade-up" type="text" placeholder="Enter Email Address" />
+                        <button data-aos="fade-up" className="btn flex" type="submit">
                             SEND <FiSend className="icon" />
                         </button>
                     </div>
@@ -40,11 +50,11 @@ const Footer = () => {
                             </a>
                         </div>
 
-                        <div className="footerParagraph">
+                        <div data-aos="fade-up" className="footerParagraph">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur, repudiandae! Rerum incidunt sunt modi nesciunt rem cumque aperiam labore repellendus reprehenderit nostrum repudiandae odio, dignissimos eaque. Non dignissimos magni iusto!
                         </div>
 
-                        <div className="footerSocials flex">
+                        <div data-aos="fade-up" className="footerSocials flex">
                             <AiOutlineTwitter className="icon"/>
                             <AiFillYoutube className="icon" />
                             <AiFillInstagram className="icon" />
@@ -54,7 +64,7 @@ const Footer = () => {
                 
                     <div className="footerLinks grid">
           {/* Group One */}
-                        <div className="linkGroup">
+                        <div data-aos="fade-up" data-aos-duration="3000"  className="linkGroup">
                             <span className="groupTitle">
                                 OUR AGENCY
                             </span>
@@ -86,7 +96,7 @@ const Footer = () => {
 
                         </div>
           {/* Group Two */}
-                         <div className="linkGroup">
+                         <div data-aos="fade-up" data-aos-duration="4000"  className="linkGroup">
                             <span className="groupTitle">
                                 PARTNERS
                             </span>
@@ -118,7 +128,7 @@ const Footer = () => {
 
                         </div>
              {/* Group Three */}
-                         <div className="linkGroup">
+                         <div data-aos="fade-up" data-aos-duration="5000" className="linkGroup">
                             <span className="groupTitle">
                                 LAST MINUTE
                             </span>
