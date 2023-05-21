@@ -8,6 +8,7 @@ import {AiFillYoutube} from "react-icons/ai"
 import {AiFillInstagram} from "react-icons/ai"
 import {FaTripadvisor} from "react-icons/fa"
 import {FiChevronRight} from "react-icons/fi"
+import Logo from "../../assets/logo.jpg";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -45,9 +46,11 @@ const Footer = () => {
                 <div className="footerCard flex">
                     <div className="footerIntro flex">
                         <div className="logoDiv">
-                            <a href="#" className="logo flex">
-                             <MdOutlineTravelExplore className="icon"/> Travel.
+                            <a data-aos="fade-up" href="#" className="logo flex">
+                             <MdOutlineTravelExplore className="icon"/>
                             </a>
+                            <img data-aos="fade-up" className="logo_img" src={Logo} alt="logo" />
+                            <h1 data-aos="fade-up" className="logo_geo">Georgia</h1>
                         </div>
 
                         <div data-aos="fade-up" className="footerParagraph">

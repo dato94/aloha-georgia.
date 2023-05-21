@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import "./navbar.scss";
-import { MdOutlineTravelExplore } from "react-icons/md"
 import { AiFillCloseCircle } from "react-icons/ai"
 import { TbGridDots } from "react-icons/tb"
+import Logo from "../../assets/logo.jpg";
 
 
 
@@ -25,7 +25,9 @@ const Navbar = () => {
 
                 <div className="logoDiv">
                     <a href="#" className="logo flex">
-                        <h1><MdOutlineTravelExplore className="icon"/>  Travel.</h1>
+                        
+                        <img className="logo_img" src={Logo} alt="logo" />
+                        <h1 className="logo_geo">Georgia</h1>
                     </a>
                 </div>
 
